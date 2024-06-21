@@ -73,6 +73,9 @@ $(document).ready(function () {
     // Reinicia o contador de tentativas
     tentativas = 0
 
+    // Desabilita o botão "Próximo Jogo" até que todos os erros sejam encontrados novamente
+    $('#btn-proximo-jogo').prop('disabled', true);
+
     // Habilita o botão de jogar novamente
     $('#btn-jogar-novamente').prop('disabled', true) // Desabilita o botão de jogar novamente
     $('#btn-iniciar').prop('disabled', false) // Habilita o botão de iniciar
@@ -106,9 +109,6 @@ $(document).ready(function () {
 
       tempoRestante = TEMPO_LIMITE_SEGUNDOS
       atualizarTempo() // Atualiza o display do tempo inicial
-
-       // Desabilita o botão "Próximo Jogo"
-       $('#btn-proximo-jogo').prop('disabled', true);
 
       timer = setInterval(function () {
         tempoRestante--
