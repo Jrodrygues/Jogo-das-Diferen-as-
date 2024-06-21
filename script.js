@@ -107,7 +107,8 @@ $(document).ready(function () {
       tempoRestante = TEMPO_LIMITE_SEGUNDOS
       atualizarTempo() // Atualiza o display do tempo inicial
 
-       
+       // Desabilita o botão "Próximo Jogo"
+       $('#btn-proximo-desafio').prop('disabled', true);
 
       timer = setInterval(function () {
         tempoRestante--
