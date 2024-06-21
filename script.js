@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+  // Esconde a mensagem de tempo esgotado inicialmente
+  $('#time-up-message').hide();
+  
   var novosJogos = [
     {
       imagens: ['assets/1.Com Erro.png', 'assets/2.Sem Erro.png'],
