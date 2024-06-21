@@ -107,6 +107,8 @@ $(document).ready(function () {
       tempoRestante = TEMPO_LIMITE_SEGUNDOS
       atualizarTempo() // Atualiza o display do tempo inicial
 
+       
+
       timer = setInterval(function () {
         tempoRestante--
         atualizarTempo()
