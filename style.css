@@ -91,7 +91,7 @@ body.dark-mode .canvas {
 .marker {
   width: 20px;
   height: 20px;
-  background: gray;
+  background-color: rgba(255, 0, 0, 0.7); 
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
