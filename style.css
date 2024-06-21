@@ -256,15 +256,15 @@ footer {
   }
 }
 
-.marker {
-  width: 30px; /* Largura do marcador */
-  height: 30px; /* Altura do marcador */
-  background-color: rgba(255, 0, 0, 0.7); /* Cor de fundo com transparência */
+/* .marker {
+  width: 30px; 
+  height: 30px; 
+  background-color: rgba(255, 0, 0, 0.7); 
   position: absolute;
-  border-radius: 50%; /* Bordas arredondadas para criar um círculo */
-  pointer-events: none; /* Evita que os marcadores recebam eventos de clique */
+  border-radius: 50%; 
+  pointer-events: none; 
   transform: translate(
     -50%,
     -50%
-  ); /* Centraliza o marcador no ponto especificado */
-}
+  );
+} */
