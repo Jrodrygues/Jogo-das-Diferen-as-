@@ -294,12 +294,20 @@ $(document).ready(function () {
           .text('Parabéns! Você detectou todos os riscos!')
           .css('color', 'green')
         clearInterval(timer) // Para o temporizador quando o jogo é ganho
+
+        // Habilita o botão "Próximo Jogo"
+        $('#btn-proximo-jogo').prop('disabled', false);
+
         return true
       } else {
         $('#game-message')
           .text('Tente novamente! Alguns riscos ainda não foram identificados.')
           .css('color', 'red')
         clearInterval(timer) // Para o temporizador quando o jogo é ganho
+
+        // Desabilita o botão "Próximo Jogo" se não todos os erros foram encontrados
+        $('#btn-proximo-jogo').prop('disabled', true);
+
         return false
       }
     }
