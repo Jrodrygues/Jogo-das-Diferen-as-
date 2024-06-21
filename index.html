@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="assets/logo.png" type="image/png" />
-    <title>Jogo das Diferenças</title>
+    <title>Percepção de Riscos</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Jogo das Diferenças</h1>
+    <h1>Perceber o risco é o primeiro passo para a prevenção.</h1>
     <div id="timer">03:00</div>
     <!-- Temporizador aqui -->
     <div id="time-up-message" class="message">
-      Tempo esgotado! Tente novamente.
+      Tempo esgotado! Avalie novamente os riscos.
     </div>
     <div id="canvas-main" class="canvas">
       <img
@@ -33,7 +33,7 @@
     <div id="game-message"></div>
     <button id="btn-instrucoes">Instruções</button>
     <input type="button" value="Jogar novamente" onclick="restartGame();" />
-    <input type="button" value="Próximo Jogo" onclick="proximoJogo();" />
+    <input type="button" value="Próximo Desafio" onclick="proximoJogo();" />
     <input type="button" id="toggle-mode" value="Modo Escuro" />
 
     <div
@@ -44,36 +44,36 @@
     >
       <h2>Instruções</h2>
       <p>
-        Bem-vindo ao Jogo das Diferenças! Seu desafio é encontrar e clicar em
-        todas as diferenças entre as imagens apresentadas.
+        Bem-vindo ao Desafio de Percepção de Riscos! Seu objetivo é identificar e clicar em todas as áreas que representam potenciais riscos entre as imagens apresentadas.
       </p>
       <p>Como jogar:</p>
       <ul>
         <li>
-          Clique na área onde você acha que há uma diferença entre as imagens.
+          Clique nas áreas onde você identificar possíveis riscos entre as imagens.
+
         </li>
         <li>
-          Encontre e clique em todas as 7 diferenças para completar o jogo.
+          Encontre e clique em todos os 7 riscos para completar o desafio.
+
         </li>
-        <li>Use o botão "Jogar Novamente" para reiniciar o jogo atual.</li>
+        <li>Use o botão "Jogar Novamente" para reiniciar o desafio atual.
+        </li>
         <li>
-          Use o botão "Próximo Jogo" para avançar para o próximo conjunto de
-          imagens.
+          Use o botão "Próximo Desafio" para avançar para o próximo conjunto de imagens.
+
         </li>
       </ul>
       <p>Dicas:</p>
       <ul>
         <li>
-          Observe atentamente todos os detalhes das imagens, incluindo formas,
-          cores e padrões.
+          Observe atentamente todos os detalhes das imagens, incluindo elementos que possam representar perigos potenciais.
         </li>
         <li>
-          Alguns erros podem ser pequenos e sutis, então explore cada parte da
-          imagem cuidadosamente.
+          Alguns riscos podem ser sutis e difíceis de identificar à primeira vista, então explore cada parte da imagem com cuidado.
         </li>
-        <li>Use o cursor para marcar as diferenças quando encontrá-las.</li>
+        <li>Use o cursor para marcar os riscos quando os encontrar.</li>
       </ul>
-      <p>Divirta-se encontrando todas as diferenças e teste sua observação!</p>
+      <p>Divirta-se enquanto desenvolve sua habilidade de percepção de riscos e teste sua capacidade de identificar potenciais perigos!</p>
     </div>
     <footer>
       Desenvolvido por <strong>Jessé Rodrigues</strong> &copy; 2024

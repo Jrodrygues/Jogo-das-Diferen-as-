@@ -286,13 +286,13 @@ $(document).ready(function () {
 
       if (accepts === 7) {
         $('#game-message')
-          .text('Parabéns! Você encontrou todos os erros!')
+          .text('Parabéns! Você detectou todos os riscos!')
           .css('color', 'green')
         clearInterval(timer) // Para o temporizador quando o jogo é ganho
         return true
       } else {
         $('#game-message')
-          .text('Tente novamente! Você não encontrou todos os erros.')
+          .text('Tente novamente! Alguns riscos ainda não foram identificados.')
           .css('color', 'red')
         clearInterval(timer) // Para o temporizador quando o jogo é ganho
         return false
