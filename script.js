@@ -108,7 +108,7 @@ $(document).ready(function () {
       atualizarTempo() // Atualiza o display do tempo inicial
 
        // Desabilita o botão "Próximo Jogo"
-       $('#btn-proximo-desafio').prop('disabled', true);
+       $('#btn-proximo-jogo').prop('disabled', true);
 
       timer = setInterval(function () {
         tempoRestante--
@@ -122,6 +122,8 @@ $(document).ready(function () {
           $('#btn-jogar-novamente').prop('disabled', false) // Habilita o botão de jogar novamente
           $('#btn-iniciar').prop('disabled', true) // Desabilita o botão de iniciar
           $('#btn-instrucoes').prop('disabled', true) // Desabilita o botão de instruções
+
+          bloquearJogo(); // Bloqueia o jogo quando o tempo acaba
 
           // Lógica adicional de finalização do jogo aqui, se necessário
         }
