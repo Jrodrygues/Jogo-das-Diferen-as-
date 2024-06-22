@@ -256,6 +256,37 @@ footer {
   }
 }
 
+/* Ajustes para resolução de projetores, normalmente superiores a 1024px */
+@media (min-width: 1024px) {
+  .imagem-esquerda,
+  .imagem-direita {
+    max-width: 100%;
+    max-height: 80vh; /* 80% da altura da viewport */
+  }
+
+  #canvas-main {
+    max-width: 90vw; /* 90% da largura da viewport */
+    max-height: 80vh; /* 80% da altura da viewport */
+  }
+
+  .message {
+    font-size: 2em; /* Aumentar o tamanho da fonte para melhor visibilidade */
+  }
+
+  #timer {
+    font-size: 1.5em; /* Aumentar o tamanho do temporizador */
+  }
+
+  .instructions {
+    font-size: 1.2em; /* Aumentar o tamanho da fonte nas instruções */
+  }
+
+  .btn {
+    font-size: 1.2em; /* Aumentar o tamanho da fonte dos botões */
+  }
+}
+
+
 /* .marker {
   width: 30px; 
   height: 30px; 
