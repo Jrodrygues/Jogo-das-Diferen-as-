@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-  // Esconde a mensagem de tempo esgotado inicialmente
-  $('#time-up-message').hide();
-  
   var novosJogos = [
     {
       imagens: ['assets/1.Com Erro.png', 'assets/2.Sem Erro.png'],
@@ -23,7 +19,7 @@ $(document).ready(function () {
         1: { x: 218, y: 380 }, // Faixa Refletiva
         2: { x: 346, y: 328 }, // Retrovisor
         3: { x: 394, y: 371 }, // Faixa
-        4: { x: 221, y: 435 }, // Calço
+        4: { x: 316, y: 413 }, // Calço sapata
         5: { x: 168, y: 127 }, // Cinto de segurança
         6: { x: 287, y: 294 } // Giro Flex
       }
