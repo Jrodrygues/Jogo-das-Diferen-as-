@@ -252,7 +252,7 @@ footer {
 @media (max-width: 600px) {
   .imagem-esquerda,
   .imagem-direita {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 300px;
   }
 
