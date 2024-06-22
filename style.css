@@ -3,9 +3,11 @@ html,
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;
-  height: auto; /* Faz com que o html e body ocupem toda a altura da tela */
-  margin: auto;
-  padding: auto;
+  height: 100%; /* Faz com que o html e body ocupem toda a altura da tela */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   transition: background-color 0.5s ease, color 0.5s ease;
   overflow-y: auto; /* Mantém a barra de rolagem vertical */
 }
@@ -25,15 +27,15 @@ body.dark-mode {
 /* Estilos para o cabeçalho H1 */
 h1 {
   font-family: 'Arial', sans-serif;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px 0;
+  /* margin-bottom: 20px; */
 }
 
 /* Estilos para o temporizador */
@@ -44,7 +46,7 @@ h1 {
 }
 
 .message {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: red;
   margin: 20px 0;
@@ -65,6 +67,10 @@ h1 {
   margin: 20px;
   border: 2px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  .main-content {
+  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+  padding-bottom: 50px; /* Adiciona espaço suficiente para o rodapé */
+  }
 }
 
 /* Estilos para as imagens */
@@ -72,8 +78,6 @@ h1 {
 .imagem-direita {
   width: 100%; /* Largura total do contêiner pai */
   height: auto; /* Altura automática para manter a proporção */
-  max-width: 650px; /* Tamanho máximo para largura */
-  max-height: 650px; /* Tamanho máximo para altura */
   object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
 }
 
@@ -138,7 +142,7 @@ body.dark-mode .canvas {
 
 /* Estilos para a mensagem de feedback do jogo */
 .message {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 20px 0;
   animation: fadeIn 1s ease-in-out;
 }
@@ -151,15 +155,15 @@ body.dark-mode .canvas {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 700px;
+  width: 90%;
   margin: 10px auto;
-  padding: 30px 30px;
+  padding: 30px;
   text-align: left;
-  margin-bottom: 100px; /* Adiciona margem na parte inferior */
 }
 
 /* Estilos para o título das instruções */
 .instructions h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #333;
 }
 
@@ -167,7 +171,7 @@ body.dark-mode .canvas {
 .instructions p,
 .instructions ul,
 .instructions li {
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   line-height: 1.5;
 }
@@ -176,7 +180,7 @@ body.dark-mode .canvas {
 button,
 input[type='button'] {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 10px;
   cursor: pointer;
   background-color: #008cba;
@@ -198,8 +202,6 @@ footer {
   color: #f0f0f0;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -252,7 +254,7 @@ footer {
 @media (max-width: 600px) {
   .imagem-esquerda,
   .imagem-direita {
-    max-width: 90%;
+    max-width: 100%;
     max-height: 300px;
   }
 
