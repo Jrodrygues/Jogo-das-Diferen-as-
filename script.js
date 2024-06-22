@@ -1,4 +1,15 @@
 $(document).ready(function () {
+  // Atualize as coordenadas para que fiquem relativas ao tamanho da imagem
+  function updateCoordinates() {
+    var canvasWidth = $('#canvas-main').width();
+    var canvasHeight = $('#canvas-main').height();
+    // Atualize as coordenadas de acordo com o tamanho atual do canvas
+    // ...
+  }
+
+  $(window).resize(updateCoordinates);
+  updateCoordinates();
+
   var novosJogos = [
     {
       imagens: ['assets/1.Com Erro.png', 'assets/2.Sem Erro.png'],
