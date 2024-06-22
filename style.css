@@ -1,63 +1,53 @@
-/* Estilos gerais para HTML e BODY */
 html,
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;
-  height: 100%; /* Faz com que o html e body ocupem toda a altura da tela */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+  height: auto; /* Faz com que o html e body ocupem toda a altura da tela */
+  margin: auto;
+  padding: auto;
   transition: background-color 0.5s ease, color 0.5s ease;
   overflow-y: auto; /* Mantém a barra de rolagem vertical */
 }
-
 /* Estilos para o modo claro */
 body.light-mode {
   background-color: #f0f0f0;
   color: #333;
 }
-
 /* Estilos para o modo escuro */
 body.dark-mode {
   background-color: #333;
   color: #f0f0f0;
 }
-
 /* Estilos para o cabeçalho H1 */
 h1 {
   font-family: 'Arial', sans-serif;
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  margin-top: 20px 0;
-  /* margin-bottom: 20px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
 /* Estilos para o temporizador */
 #timer {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
 }
-
 .message {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: bold;
   color: red;
   margin: 20px 0;
   animation: fadeIn 1s ease-in-out;
   display: none; /* Começa oculto */
 }
-
 .dark-mode .message {
   color: red; /* Ajusta a cor do texto para modo escuro, se necessário */
 }
-
 /* Estilos para os canvas das imagens */
 .canvas {
   display: inline-block;
@@ -67,52 +57,43 @@ h1 {
   margin: 20px;
   border: 2px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  .main-content {
-  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
-  padding-bottom: 50px; /* Adiciona espaço suficiente para o rodapé */
-  }
 }
-
 /* Estilos para as imagens */
 .imagem-esquerda,
 .imagem-direita {
   width: 100%; /* Largura total do contêiner pai */
   height: auto; /* Altura automática para manter a proporção */
+  max-width: 650px; /* Tamanho máximo para largura */
+  max-height: 650px; /* Tamanho máximo para altura */
   object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
 }
-
 /* Estilos específicos para o modo claro nos canvas */
 body.light-mode .canvas {
   border-color: #ccc;
 }
-
 /* Estilos específicos para o modo escuro nos canvas */
 body.dark-mode .canvas {
   border-color: #555;
 }
-
 /* Estilos para os marcadores de diferenças */
 .marker {
   width: 30px;
   height: 30px;
-  background-color: rgba(255, 0, 0, 0.7); 
+  background-color: rgba(255, 0, 0, 0.7);
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   transform: scale(0);
   animation: bounceIn 0.5s forwards;
 }
-
 /* Estilos para os marcadores aceitos */
 .marker.accept {
   background: lightgreen;
 }
-
 /* Estilos para os marcadores rejeitados */
 .marker.reject {
   background: red;
 }
-
 /* Estilos para os alvos de diferenças */
 .target {
   width: 50px;
@@ -121,7 +102,6 @@ body.dark-mode .canvas {
   position: absolute;
   border-radius: 50%;
 }
-
 /* Estilos para o cursor personalizado */
 .cursor {
   position: absolute;
@@ -134,19 +114,16 @@ body.dark-mode .canvas {
   transition: opacity 0.2s linear;
   z-index: 2;
 }
-
 /* Estilos para tornar o cursor visível */
 .cursor.visible {
   opacity: 1;
 }
-
 /* Estilos para a mensagem de feedback do jogo */
 .message {
-  font-size: 1.25rem;
+  font-size: 20px;
   margin: 20px 0;
   animation: fadeIn 1s ease-in-out;
 }
-
 /* Estilos para a seção de instruções */
 .instructions {
   display: none; /* Inicialmente oculto */
@@ -155,32 +132,29 @@ body.dark-mode .canvas {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 700px;
-  width: 90%;
   margin: 10px auto;
-  padding: 30px;
+  padding: 30px 30px;
   text-align: left;
+  margin-bottom: 100px; /* Adiciona margem na parte inferior */
 }
-
 /* Estilos para o título das instruções */
 .instructions h2 {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #333;
 }
-
 /* Estilos para os parágrafos e listas nas instruções */
 .instructions p,
 .instructions ul,
 .instructions li {
-  font-size: 1rem;
+  font-size: 16px;
   color: #333;
   line-height: 1.5;
 }
-
 /* Estilos para botões de ação */
 button,
 input[type='button'] {
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 16px;
   margin: 10px;
   cursor: pointer;
   background-color: #008cba;
@@ -189,38 +163,34 @@ input[type='button'] {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
 /* Estilos para botões de ação em hover */
 button:hover,
 input[type='button']:hover {
   background-color: #005f6b;
 }
-
 /* Estilos para o rodapé */
 footer {
   background-color: #333;
   color: #f0f0f0;
   text-align: center;
   padding: 10px 0;
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
-
 /* Estilos específicos para o modo escuro no temporizador */
 .dark-mode #timer {
   color: #f0f0f0;
 }
-
 /* Estilos específicos para o modo escuro no cabeçalho H1 */
 .dark-mode h1 {
   color: #f0f0f0;
 }
-
 /* Estilos específicos para o modo escuro no rodapé */
 .dark-mode footer {
   background-color: #f0f0f0;
   color: #333;
 }
-
 /* Estilos específicos para o modo escuro nas instruções */
 .dark-mode .instructions h2,
 .dark-mode .instructions p,
@@ -229,7 +199,6 @@ footer {
   background-color: #f0f0f0;
   color: #333;
 }
-
 /* Animação de fade-in para a mensagem de feedback */
 @keyframes fadeIn {
   from {
@@ -239,7 +208,6 @@ footer {
     opacity: 1;
   }
 }
-
 /* Animação de bounce-in para os marcadores */
 @keyframes bounceIn {
   from {
@@ -249,69 +217,10 @@ footer {
     transform: scale(1);
   }
 }
-
-/* Ajustes para telas menores que 600px */
 @media (max-width: 600px) {
   .imagem-esquerda,
   .imagem-direita {
     max-width: 100%;
     max-height: 300px;
   }
-
-  #timer {
-    font-size: 1.5rem;
-  }
-
-  .message {
-    font-size: 1.5rem;
-  }
-
-  .instructions {
-    font-size: 1rem;
-  }
 }
-
-/* Ajustes para telas maiores que 1024px */
-@media (min-width: 1024px) {
-  .imagem-esquerda,
-  .imagem-direita {
-    max-width: 100%;
-    max-height: 80vh; /* 80% da altura da viewport */
-  }
-
-  .canvas {
-    max-width: 90vw; /* 90% da largura da viewport */
-    max-height: 80vh; /* 80% da altura da viewport */
-  }
-
-  .message {
-    font-size: 2rem;
-  }
-
-  #timer {
-    font-size: 1.5rem;
-  }
-
-  .instructions {
-    font-size: 1.2rem;
-  }
-
-  button,
-  input[type='button'] {
-    font-size: 1.2rem;
-  }
-}
-
-
-/* .marker {
-  width: 30px; 
-  height: 30px; 
-  background-color: rgba(255, 0, 0, 0.7); 
-  position: absolute;
-  border-radius: 50%; 
-  pointer-events: none; 
-  transform: translate(
-    -50%,
-    -50%
-  );
-} */
