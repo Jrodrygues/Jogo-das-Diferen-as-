@@ -22,37 +22,37 @@ $(document).ready(function () {
     {
       imagens: ['assets/1.Com Erro.png', 'assets/2.Sem Erro.png'],
       coordenadas: {
-        0: { x: 152, y: 429 }, // Faixa Camisa
-        1: { x: 152, y: 503 }, // Faixa Calça
-        2: { x: 105, y: 458 }, // Cone
-        3: { x: 233, y: 361 }, // Tampa Moto Poda
-        4: { x: 160, y: 358 }, // Bandeirola
-        5: { x: 237, y: 427 }, // Lanterna
-        6: { x: 305, y: 420 } // Faixa
+        0: { x: 163, y: 460 }, // Faixa Camisa
+        1: { x: 166, y: 530 }, // Faixa Calça
+        2: { x: 100, y: 494 }, // Cone
+        3: { x: 168, y: 383 }, // Bandeirola
+        4: { x: 251, y: 387 }, // Tampa Moto Poda
+        5: { x: 253, y: 458 }, // Lanterna
+        6: { x: 324, y: 452 } // Faixa
       }
     },
     {
       imagens: ['assets/3.Com Erro.png', 'assets/4.Sem Erro.png'],
       coordenadas: {
         0: { x: 83, y: 401 }, // Bastão
-        1: { x: 218, y: 380 }, // Faixa Refletiva
-        2: { x: 346, y: 328 }, // Retrovisor
-        3: { x: 394, y: 371 }, // Faixa
-        4: { x: 316, y: 413 }, // Calço sapata
-        5: { x: 168, y: 127 }, // Cinto de segurança
-        6: { x: 287, y: 294 } // Giro Flex
+        1: { x: 226, y: 391 }, // Faixa Refletiva
+        2: { x: 324, y: 428 }, // Retrovisor
+        3: { x: 353, y: 338 }, // Faixa
+        4: { x: 402, y: 383 }, // Calço sapata
+        5: { x: 297, y: 305 }, // Cinto de segurança
+        6: { x: 175, y: 128 } // Giro Flex
       }
     },
     {
       imagens: ['assets/5.Com Erro.png', 'assets/5.Sem Erro.png'],
       coordenadas: {
-        0: { x: 245, y: 86 }, // Lençol
-        1: { x: 222, y: 56 }, // Faixa
-        2: { x: 257, y: 470 }, // Cone
-        3: { x: 169, y: 344 }, // Faixa Refletiva
-        4: { x: 238, y: 326 }, // Lanterna
-        5: { x: 242, y: 276 }, // Tampa Moto Poda
-        6: { x: 172, y: 274 } // Bandeirola
+        0: { x: 259, y: 486 }, // Lençol
+        1: { x: 182, y: 365 }, // Faixa
+        2: { x: 184, y: 289 }, // Cone
+        3: { x: 256, y: 350 }, // Faixa Refletiva
+        4: { x: 259, y: 294 }, // Lanterna
+        5: { x: 260, y: 98 }, // Tampa Moto Poda
+        6: { x: 235, y: 61 } // Bandeirola
       }
     }
   ]
