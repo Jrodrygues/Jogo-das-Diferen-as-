@@ -94,6 +94,9 @@ $(document).ready(function () {
     tempoRestante = TEMPO_LIMITE_SEGUNDOS // Reinicia o tempo restante
     atualizarTempo() // Atualiza o display do temporizador
 
+     // Esconde a mensagem de tempo esgotado, se estiver visível
+     hideTimeUpMessage()
+
     // Esconde a mensagem de tempo esgotado, se estiver visível
   }
 
