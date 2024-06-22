@@ -12,6 +12,12 @@ body {
   overflow-y: auto; /* Mantém a barra de rolagem vertical */
 }
 
+/* Container principal */
+.main-content {
+  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+  padding-bottom: 50px; /* Adiciona espaço suficiente para o rodapé */
+}
+
 /* Estilos para o modo claro */
 body.light-mode {
   background-color: #f0f0f0;
