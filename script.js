@@ -1,10 +1,18 @@
 $(document).ready(function () {
-  // Atualize as coordenadas para que fiquem relativas ao tamanho da imagem
-  function updateCoordinates() {
+   // Atualize as coordenadas para que fiquem relativas ao tamanho da imagem
+   function updateCoordinates() {
     var canvasWidth = $('#canvas-main').width();
     var canvasHeight = $('#canvas-main').height();
     // Atualize as coordenadas de acordo com o tamanho atual do canvas
-    // ...
+    // Por exemplo:
+    $('.marker').each(function() {
+      var leftPercent = $(this).data('left-percent');
+      var topPercent = $(this).data('top-percent');
+      $(this).css({
+        left: (leftPercent * canvasWidth) + 'px',
+        top: (topPercent * canvasHeight) + 'px'
+      });
+    });
   }
 
   $(window).resize(updateCoordinates);
