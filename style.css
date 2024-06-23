@@ -37,7 +37,7 @@ h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: red;
+  color: inherit;
   background-color: #fff;
   max-width: 100px;
   border-radius: 10px;
@@ -63,7 +63,7 @@ h1 {
 /* Estilos específicos para o modo escuro no temporizador */
 .dark-mode #timer {
   background-color: #444;
-  color: red;
+  color: #f0f0f0;
 }
 /* Estilos para os canvas das imagens */
 .canvas {
@@ -72,14 +72,16 @@ h1 {
   cursor: url(cursor.png), auto;
   overflow: hidden;
   margin: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* Estilos para as imagens */
 .imagem-esquerda,
 .imagem-direita {
   width: 100%; /* Largura total do contêiner pai */
   height: auto; /* Altura automática para manter a proporção */
-  max-width: 800px; /* Tamanho máximo para largura */
-  max-height: 800px; /* Tamanho máximo para altura */
+  max-width: 650px; /* Tamanho máximo para largura */
+  max-height: 650px; /* Tamanho máximo para altura */
   object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
 }
 /* Estilos específicos para o modo claro nos canvas */
@@ -91,10 +93,15 @@ body.dark-mode .canvas {
   border-color: #555;
 }
 
+/* Estilos específicos para o modo escuro no temporizador */
+.dark-mode #timer {
+  background-color: #444;
+  color: #f0f0f0;
+}
 /* Estilos para os marcadores de diferenças */
 .marker {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: rgba(255, 0, 0, 0.7);
   position: absolute;
   border-radius: 50%;
@@ -102,7 +109,6 @@ body.dark-mode .canvas {
   transform: scale(0);
   animation: bounceIn 0.5s forwards;
 }
-
 /* Estilos para os marcadores aceitos */
 .marker.accept {
   background: lightgreen;
@@ -193,7 +199,10 @@ footer {
   text-align: center;
   padding: 10px 0;
 }
-
+/* Estilos específicos para o modo escuro no temporizador */
+.dark-mode #timer {
+  color: #f0f0f0;
+}
 /* Estilos específicos para o modo escuro no cabeçalho H1 */
 .dark-mode h1 {
   color: #f0f0f0;
@@ -254,3 +263,13 @@ footer {
     padding: 8px 16px;
   }
 }
+
+/* .marker {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 0, 0, 0.7);
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+} */
