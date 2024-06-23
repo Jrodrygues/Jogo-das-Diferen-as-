@@ -1,3 +1,4 @@
+/* Estilos gerais para HTML e BODY */
 html,
 body {
   font-family: 'Arial', sans-serif;
@@ -33,9 +34,19 @@ h1 {
 }
 /* Estilos para o temporizador */
 #timer {
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: red;
+  background-color: #fff;
+  max-width: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  padding: 10px 10px;
+  animation: pulse 1s infinite;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .message {
   font-size: 5rem;
@@ -48,6 +59,12 @@ h1 {
 .dark-mode .message {
   color: red; /* Ajusta a cor do texto para modo escuro, se necessário */
 }
+
+/* Estilos específicos para o modo escuro no temporizador */
+.dark-mode #timer {
+  background-color: #444;
+  color: red;
+}
 /* Estilos para os canvas das imagens */
 .canvas {
   display: inline-block;
@@ -55,16 +72,14 @@ h1 {
   cursor: url(cursor.png), auto;
   overflow: hidden;
   margin: 20px;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* Estilos para as imagens */
 .imagem-esquerda,
 .imagem-direita {
   width: 100%; /* Largura total do contêiner pai */
   height: auto; /* Altura automática para manter a proporção */
-  max-width: 650px; /* Tamanho máximo para largura */
-  max-height: 650px; /* Tamanho máximo para altura */
+  max-width: 800px; /* Tamanho máximo para largura */
+  max-height: 800px; /* Tamanho máximo para altura */
   object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
 }
 /* Estilos específicos para o modo claro nos canvas */
@@ -75,10 +90,11 @@ body.light-mode .canvas {
 body.dark-mode .canvas {
   border-color: #555;
 }
+
 /* Estilos para os marcadores de diferenças */
 .marker {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-color: rgba(255, 0, 0, 0.7);
   position: absolute;
   border-radius: 50%;
@@ -86,6 +102,7 @@ body.dark-mode .canvas {
   transform: scale(0);
   animation: bounceIn 0.5s forwards;
 }
+
 /* Estilos para os marcadores aceitos */
 .marker.accept {
   background: lightgreen;
@@ -125,7 +142,8 @@ body.dark-mode .canvas {
   animation: fadeIn 1s ease-in-out;
 }
 /* Estilos para a seção de instruções */
-.instructions {
+.instructions,
+.footer {
   display: none; /* Inicialmente oculto */
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ccc;
@@ -174,30 +192,38 @@ footer {
   color: #f0f0f0;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
-/* Estilos específicos para o modo escuro no temporizador */
-.dark-mode #timer {
-  color: #f0f0f0;
-}
+
 /* Estilos específicos para o modo escuro no cabeçalho H1 */
 .dark-mode h1 {
   color: #f0f0f0;
 }
 /* Estilos específicos para o modo escuro no rodapé */
-.dark-mode footer {
+/* .dark-mode footer {
   background-color: #f0f0f0;
   color: #333;
-}
+} */
 /* Estilos específicos para o modo escuro nas instruções */
 .dark-mode .instructions h2,
 .dark-mode .instructions p,
 .dark-mode .instructions ul,
-.dark-mode .instructions li {
+.dark-mode .instructions li,
+.dark-mode footer {
   background-color: #f0f0f0;
   color: #333;
+}
+
+/* Animação de pulso para o temporizador */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 /* Animação de fade-in para a mensagem de feedback */
 @keyframes fadeIn {
@@ -222,5 +248,9 @@ footer {
   .imagem-direita {
     max-width: 100%;
     max-height: 300px;
+  }
+  #timer {
+    font-size: 1.5rem;
+    padding: 8px 16px;
   }
 }
