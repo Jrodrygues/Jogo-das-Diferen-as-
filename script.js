@@ -44,7 +44,7 @@ $(document).ready(function () {
   var proximoJogoIndex = 0
   var jogo = new Game(novosJogos[proximoJogoIndex].coordenadas)
   var MAX_TENTATIVAS = 3 // Número máximo de tentativas permitidas
-  var TEMPO_LIMITE_SEGUNDOS = 10 // Tempo limite em segundos
+  var TEMPO_LIMITE_SEGUNDOS = 180 // Tempo limite em segundos
   var tentativas = 0 // Contador de tentativas
   var tempoRestante = TEMPO_LIMITE_SEGUNDOS // Tempo restante inicial
   var timer // ID do temporizador
