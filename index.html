@@ -7,10 +7,24 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <h1>Perceber o risco é o primeiro passo para a prevenção.</h1>
+    <!-- Botão de pop-out para instruções -->
+    <button id="btn-instrucoes" class="btn-instrucoes">Instruções</button>
+    <!-- <button id="btn-instrucoes">Instruções</button> -->
+    <input type="button" value="Jogar novamente" onclick="restartGame();" />
+    <input
+      type="button"
+      id="btn-proximo-jogo"
+      value="Próximo Desafio"
+      onclick="proximoJogo();"
+    />
+    <input type="button" id="toggle-mode" value="Modo Escuro" />
+    <br />
     <div id="timer">03:00</div>
     <!-- Temporizador aqui -->
+    <div id="game-message"></div>
     <div id="time-up-message" class="message">
       Tempo esgotado! Avalie novamente os riscos.
     </div>
@@ -29,63 +43,57 @@
       />
     </div>
     <br />
-    <div id="game-message"></div>
-    <button id="btn-instrucoes">Instruções</button>
-    <input type="button" value="Jogar novamente" onclick="restartGame();" />
-    <input
-      type="button"
-      id="btn-proximo-jogo"
-      value="Próximo Desafio"
-      onclick="proximoJogo();"
-    />
-    <input type="button" id="toggle-mode" value="Modo Escuro" />
 
-    <div
-      div
-      class="instructions"
-      id="instructions-section"
-      style="display: none"
-    >
-      <h2>Instruções</h2>
-      <p>
-        Bem-vindo ao Desafio de Percepção de Riscos! Seu objetivo é identificar
-        e clicar em todas as áreas que representam potenciais riscos entre as
-        imagens apresentadas.
-      </p>
-      <p>Como jogar:</p>
-      <ul>
-        <li>
-          Clique nas áreas onde você identificar possíveis riscos entre as
-          imagens.
-        </li>
-        <li>
-          Encontre e clique em todos os 7 riscos para completar o desafio.
-        </li>
-        <li>Use o botão "Jogar Novamente" para reiniciar o desafio atual.</li>
-        <li>
-          Use o botão "Próximo Desafio" para avançar para o próximo conjunto de
-          imagens.
-        </li>
-      </ul>
-      <p>Dicas:</p>
-      <ul>
-        <li>
-          Observe atentamente todos os detalhes das imagens, incluindo elementos
-          que possam representar perigos potenciais.
-        </li>
-        <li>
-          Alguns riscos podem ser sutis e difíceis de identificar à primeira
-          vista, então explore cada parte da imagem com cuidado.
-        </li>
-        <li>Use o cursor para marcar os riscos quando os encontrar.</li>
-      </ul>
-      <p>
-        Divirta-se enquanto desenvolve sua habilidade de percepção de riscos e
-        teste sua capacidade de identificar potenciais perigos!
-      </p>
-      <footer>
-        Desenvolvido por <strong>Jessé Rodrigues</strong> &copy; 2024
-      </footer>
+    <!-- Elemento Pop-up -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="close-popup" class="close-popup">&times;</span>
+        <div class="instructions">
+          <h2>Instruções</h2>
+          <p>
+            Bem-vindo ao Desafio de Percepção de Riscos! Seu objetivo é
+            identificar e clicar em todas as áreas que representam potenciais
+            riscos entre as imagens apresentadas.
+          </p>
+          <p>Como jogar:</p>
+          <ul>
+            <li>
+              Clique nas áreas onde você identificar possíveis riscos entre as
+              imagens.
+            </li>
+            <li>
+              Encontre e clique em todos os 7 riscos para completar o desafio.
+            </li>
+            <li>
+              Use o botão "Jogar Novamente" para reiniciar o desafio atual.
+            </li>
+            <li>
+              Use o botão "Próximo Desafio" para avançar para o próximo conjunto
+              de imagens.
+            </li>
+          </ul>
+          <p>Dicas:</p>
+          <ul>
+            <li>
+              Observe atentamente todos os detalhes das imagens, incluindo
+              elementos que possam representar perigos potenciais.
+            </li>
+            <li>
+              Alguns riscos podem ser sutis e difíceis de identificar à primeira
+              vista, então explore cada parte da imagem com cuidado.
+            </li>
+            <li>Use o cursor para marcar os riscos quando os encontrar.</li>
+          </ul>
+          <p>
+            Divirta-se enquanto desenvolve sua habilidade de percepção de riscos
+            e teste sua capacidade de identificar potenciais perigos!
+          </p>
+          <button id="close-popup-btn" class="close-popup-btn">Fechar</button>
+        </div>
+      </div>
     </div>
+    <footer>
+      Desenvolvido por <strong>Jessé Rodrigues</strong> &copy; 2024
+    </footer>
   </body>
 </html>
